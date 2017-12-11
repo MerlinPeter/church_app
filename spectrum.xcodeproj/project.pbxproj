@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308BD0CE8DF1F883E95F083F /* Pods_spectrumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6BED1775C6072E061A3D8E /* Pods_spectrumUITests.framework */; };
+		59B515878C9B22973B0DAA5E /* Pods_spectrumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */; };
+		D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772426E1FDB74BE0082DD6D /* DBHelper.swift */; };
+		D77242711FDB77370082DD6D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242701FDB77370082DD6D /* DataService.swift */; };
+		D77242731FDB776D0082DD6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242721FDB776D0082DD6D /* Constants.swift */; };
+		D77242771FDB999E0082DD6D /* EventListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242761FDB999E0082DD6D /* EventListVC.swift */; };
+		D77242791FDCCC880082DD6D /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242781FDCCC880082DD6D /* EventVC.swift */; };
+		D772427B1FDCDD250082DD6D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772427A1FDCDD250082DD6D /* Message.swift */; };
+		D772427D1FDCDE240082DD6D /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772427C1FDCDE240082DD6D /* MessageVC.swift */; };
+		D772427F1FDCDE8E0082DD6D /* MessageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */; };
+		D77242811FDD0B300082DD6D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242801FDD0B300082DD6D /* BaseVC.swift */; };
+		D77242831FDD2FF10082DD6D /* SermonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242821FDD2FF10082DD6D /* SermonVC.swift */; };
 		D7F0346E1FD3BD6D001D9046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0346D1FD3BD6D001D9046 /* AppDelegate.swift */; };
-		D7F034701FD3BD6D001D9046 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0346F1FD3BD6D001D9046 /* FirstViewController.swift */; };
-		D7F034721FD3BD6D001D9046 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F034711FD3BD6D001D9046 /* SecondViewController.swift */; };
 		D7F034751FD3BD6D001D9046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F034731FD3BD6D001D9046 /* Main.storyboard */; };
 		D7F034771FD3BD6D001D9046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F034761FD3BD6D001D9046 /* Assets.xcassets */; };
 		D7F0347A1FD3BD6D001D9046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F034781FD3BD6D001D9046 /* LaunchScreen.storyboard */; };
 		D7F034851FD3BD6D001D9046 /* spectrumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F034841FD3BD6D001D9046 /* spectrumTests.swift */; };
 		D7F034901FD3BD6D001D9046 /* spectrumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F0348F1FD3BD6D001D9046 /* spectrumUITests.swift */; };
+		D7F0349F1FD3BEB6001D9046 /* copymain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F0349D1FD3BEB6001D9046 /* copymain.storyboard */; };
+		D7F034A11FD3CA52001D9046 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7F034A01FD3CA52001D9046 /* Podfile */; };
+		D7F034A31FD3DC30001D9046 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F034A21FD3DC30001D9046 /* GoogleService-Info.plist */; };
+		D7F034A51FD3DDDB001D9046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F034A41FD3DDDB001D9046 /* LoginViewController.swift */; };
+		D7F034A91FD526C2001D9046 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F034A81FD526C2001D9046 /* Event.swift */; };
+		FD8E6E3980ADD98BB2DCBBD7 /* Pods_spectrum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0176DA1E47B1121976ADE1E1 /* Pods_spectrum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +51,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0176DA1E47B1121976ADE1E1 /* Pods_spectrum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1260F1480686A956429635 /* Pods-spectrumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumUITests/Pods-spectrumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E4ED3D1BA96E13572DDDFFB /* Pods-spectrum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.debug.xcconfig"; sourceTree = "<group>"; };
+		54CAE083A1E3FFDF77A25BD9 /* Pods-spectrumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumUITests/Pods-spectrumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6562969DA81E92045FC0AFD6 /* Pods-spectrumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.release.xcconfig"; sourceTree = "<group>"; };
+		D772426E1FDB74BE0082DD6D /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		D77242701FDB77370082DD6D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D77242721FDB776D0082DD6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D77242761FDB999E0082DD6D /* EventListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListVC.swift; path = VC/EventListVC.swift; sourceTree = "<group>"; };
+		D77242781FDCCC880082DD6D /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventVC.swift; path = VC/EventVC.swift; sourceTree = "<group>"; };
+		D772427A1FDCDD250082DD6D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Model/Message.swift; sourceTree = "<group>"; };
+		D772427C1FDCDE240082DD6D /* MessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageVC.swift; path = VC/MessageVC.swift; sourceTree = "<group>"; };
+		D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListVC.swift; path = VC/MessageListVC.swift; sourceTree = "<group>"; };
+		D77242801FDD0B300082DD6D /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseVC.swift; path = VC/BaseVC.swift; sourceTree = "<group>"; };
+		D77242821FDD2FF10082DD6D /* SermonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SermonVC.swift; path = VC/SermonVC.swift; sourceTree = "<group>"; };
 		D7F0346A1FD3BD6D001D9046 /* spectrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spectrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F0346D1FD3BD6D001D9046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7F0346F1FD3BD6D001D9046 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D7F034711FD3BD6D001D9046 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D7F034741FD3BD6D001D9046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7F034761FD3BD6D001D9046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7F034791FD3BD6D001D9046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +81,12 @@
 		D7F0348B1FD3BD6D001D9046 /* spectrumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spectrumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F0348F1FD3BD6D001D9046 /* spectrumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spectrumUITests.swift; sourceTree = "<group>"; };
 		D7F034911FD3BD6D001D9046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7F0349E1FD3BEB6001D9046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/copymain.storyboard; sourceTree = "<group>"; };
+		D7F034A01FD3CA52001D9046 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D7F034A21FD3DC30001D9046 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "spectrum/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7F034A41FD3DDDB001D9046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = VC/LoginViewController.swift; sourceTree = "<group>"; };
+		D7F034A81FD526C2001D9046 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Model/Event.swift; sourceTree = "<group>"; };
+		EA6BED1775C6072E061A3D8E /* Pods_spectrumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8E6E3980ADD98BB2DCBBD7 /* Pods_spectrum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B515878C9B22973B0DAA5E /* Pods_spectrumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +110,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308BD0CE8DF1F883E95F083F /* Pods_spectrumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		715A7A2192B32A3C56E6777B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0176DA1E47B1121976ADE1E1 /* Pods_spectrum.framework */,
+				8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */,
+				EA6BED1775C6072E061A3D8E /* Pods_spectrumUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA2F97DC95BE64805342587C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E4ED3D1BA96E13572DDDFFB /* Pods-spectrum.debug.xcconfig */,
+				CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */,
+				C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */,
+				6562969DA81E92045FC0AFD6 /* Pods-spectrumTests.release.xcconfig */,
+				0A1260F1480686A956429635 /* Pods-spectrumUITests.debug.xcconfig */,
+				54CAE083A1E3FFDF77A25BD9 /* Pods-spectrumUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D7F034611FD3BD6D001D9046 = {
 			isa = PBXGroup;
 			children = (
+				D7F034A21FD3DC30001D9046 /* GoogleService-Info.plist */,
+				D7F034A01FD3CA52001D9046 /* Podfile */,
 				D7F0346C1FD3BD6D001D9046 /* spectrum */,
 				D7F034831FD3BD6D001D9046 /* spectrumTests */,
 				D7F0348E1FD3BD6D001D9046 /* spectrumUITests */,
 				D7F0346B1FD3BD6D001D9046 /* Products */,
+				BA2F97DC95BE64805342587C /* Pods */,
+				715A7A2192B32A3C56E6777B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +167,24 @@
 		D7F0346C1FD3BD6D001D9046 /* spectrum */ = {
 			isa = PBXGroup;
 			children = (
+				D7F0349D1FD3BEB6001D9046 /* copymain.storyboard */,
 				D7F0346D1FD3BD6D001D9046 /* AppDelegate.swift */,
-				D7F0346F1FD3BD6D001D9046 /* FirstViewController.swift */,
-				D7F034711FD3BD6D001D9046 /* SecondViewController.swift */,
+				D7F034A41FD3DDDB001D9046 /* LoginViewController.swift */,
+				D77242761FDB999E0082DD6D /* EventListVC.swift */,
+				D77242781FDCCC880082DD6D /* EventVC.swift */,
+				D7F034A81FD526C2001D9046 /* Event.swift */,
+				D772427A1FDCDD250082DD6D /* Message.swift */,
+				D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */,
+				D772427C1FDCDE240082DD6D /* MessageVC.swift */,
 				D7F034731FD3BD6D001D9046 /* Main.storyboard */,
+				D77242821FDD2FF10082DD6D /* SermonVC.swift */,
 				D7F034761FD3BD6D001D9046 /* Assets.xcassets */,
 				D7F034781FD3BD6D001D9046 /* LaunchScreen.storyboard */,
 				D7F0347B1FD3BD6D001D9046 /* Info.plist */,
+				D772426E1FDB74BE0082DD6D /* DBHelper.swift */,
+				D77242701FDB77370082DD6D /* DataService.swift */,
+				D77242721FDB776D0082DD6D /* Constants.swift */,
+				D77242801FDD0B300082DD6D /* BaseVC.swift */,
 			);
 			path = spectrum;
 			sourceTree = "<group>";
@@ -135,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F034941FD3BD6D001D9046 /* Build configuration list for PBXNativeTarget "spectrum" */;
 			buildPhases = (
+				0BD5199CBDC41D782C4F47FD /* [CP] Check Pods Manifest.lock */,
 				D7F034661FD3BD6D001D9046 /* Sources */,
 				D7F034671FD3BD6D001D9046 /* Frameworks */,
 				D7F034681FD3BD6D001D9046 /* Resources */,
+				A5F801F5A1E5602AA9A1FA3E /* [CP] Embed Pods Frameworks */,
+				0EC2DDB65D53E1D0E9962B8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F034971FD3BD6D001D9046 /* Build configuration list for PBXNativeTarget "spectrumTests" */;
 			buildPhases = (
+				BAEE2E9CB58565455491D35F /* [CP] Check Pods Manifest.lock */,
 				D7F0347C1FD3BD6D001D9046 /* Sources */,
 				D7F0347D1FD3BD6D001D9046 /* Frameworks */,
 				D7F0347E1FD3BD6D001D9046 /* Resources */,
+				E843B1F7BF072DA71D8C48F5 /* [CP] Embed Pods Frameworks */,
+				EF39398EABB299EA24F9630C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F0349A1FD3BD6D001D9046 /* Build configuration list for PBXNativeTarget "spectrumUITests" */;
 			buildPhases = (
+				47848015DF3B3B99CA11AF33 /* [CP] Check Pods Manifest.lock */,
 				D7F034871FD3BD6D001D9046 /* Sources */,
 				D7F034881FD3BD6D001D9046 /* Frameworks */,
 				D7F034891FD3BD6D001D9046 /* Resources */,
+				CBFCB4A5B4E0E9A425619E63 /* [CP] Embed Pods Frameworks */,
+				9772EEB3216C247C2FA9B307 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,9 +323,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F034A11FD3CA52001D9046 /* Podfile in Resources */,
 				D7F0347A1FD3BD6D001D9046 /* LaunchScreen.storyboard in Resources */,
 				D7F034771FD3BD6D001D9046 /* Assets.xcassets in Resources */,
+				D7F0349F1FD3BEB6001D9046 /* copymain.storyboard in Resources */,
 				D7F034751FD3BD6D001D9046 /* Main.storyboard in Resources */,
+				D7F034A31FD3DC30001D9046 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +348,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BD5199CBDC41D782C4F47FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0EC2DDB65D53E1D0E9962B8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrum/Pods-spectrum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47848015DF3B3B99CA11AF33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9772EEB3216C247C2FA9B307 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrumUITests/Pods-spectrumUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5F801F5A1E5602AA9A1FA3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrum/Pods-spectrum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEE2E9CB58565455491D35F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBFCB4A5B4E0E9A425619E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrumUITests/Pods-spectrumUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E843B1F7BF072DA71D8C48F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF39398EABB299EA24F9630C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7F034661FD3BD6D001D9046 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F034721FD3BD6D001D9046 /* SecondViewController.swift in Sources */,
+				D7F034A51FD3DDDB001D9046 /* LoginViewController.swift in Sources */,
 				D7F0346E1FD3BD6D001D9046 /* AppDelegate.swift in Sources */,
-				D7F034701FD3BD6D001D9046 /* FirstViewController.swift in Sources */,
+				D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */,
+				D772427F1FDCDE8E0082DD6D /* MessageListVC.swift in Sources */,
+				D7F034A91FD526C2001D9046 /* Event.swift in Sources */,
+				D77242711FDB77370082DD6D /* DataService.swift in Sources */,
+				D77242791FDCCC880082DD6D /* EventVC.swift in Sources */,
+				D77242811FDD0B300082DD6D /* BaseVC.swift in Sources */,
+				D772427B1FDCDD250082DD6D /* Message.swift in Sources */,
+				D77242731FDB776D0082DD6D /* Constants.swift in Sources */,
+				D772427D1FDCDE240082DD6D /* MessageVC.swift in Sources */,
+				D77242831FDD2FF10082DD6D /* SermonVC.swift in Sources */,
+				D77242771FDB999E0082DD6D /* EventListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +553,14 @@
 				D7F034791FD3BD6D001D9046 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D7F0349D1FD3BEB6001D9046 /* copymain.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F0349E1FD3BEB6001D9046 /* Base */,
+			);
+			name = copymain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,11 +661,12 @@
 		};
 		D7F034951FD3BD6D001D9046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4ED3D1BA96E13572DDDFFB /* Pods-spectrum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = spectrum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = merlinahila.spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectrum.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,11 +674,12 @@
 		};
 		D7F034961FD3BD6D001D9046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = spectrum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = merlinahila.spectrum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spectrum.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -438,6 +687,7 @@
 		};
 		D7F034981FD3BD6D001D9046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +702,7 @@
 		};
 		D7F034991FD3BD6D001D9046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6562969DA81E92045FC0AFD6 /* Pods-spectrumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +717,7 @@
 		};
 		D7F0349B1FD3BD6D001D9046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1260F1480686A956429635 /* Pods-spectrumUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = spectrumUITests/Info.plist;
@@ -479,6 +731,7 @@
 		};
 		D7F0349C1FD3BD6D001D9046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54CAE083A1E3FFDF77A25BD9 /* Pods-spectrumUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = spectrumUITests/Info.plist;
@@ -509,6 +762,7 @@
 				D7F034961FD3BD6D001D9046 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F034971FD3BD6D001D9046 /* Build configuration list for PBXNativeTarget "spectrumTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +771,7 @@
 				D7F034991FD3BD6D001D9046 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F0349A1FD3BD6D001D9046 /* Build configuration list for PBXNativeTarget "spectrumUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +780,7 @@
 				D7F0349C1FD3BD6D001D9046 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
