@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		308BD0CE8DF1F883E95F083F /* Pods_spectrumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6BED1775C6072E061A3D8E /* Pods_spectrumUITests.framework */; };
 		59B515878C9B22973B0DAA5E /* Pods_spectrumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */; };
+		D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59D1FE10CAB004C1C09 /* GroupVC.swift */; };
 		D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772426E1FDB74BE0082DD6D /* DBHelper.swift */; };
 		D77242711FDB77370082DD6D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242701FDB77370082DD6D /* DataService.swift */; };
 		D77242731FDB776D0082DD6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242721FDB776D0082DD6D /* Constants.swift */; };
@@ -59,6 +60,7 @@
 		8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.release.xcconfig"; sourceTree = "<group>"; };
+		D735E59D1FE10CAB004C1C09 /* GroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupVC.swift; path = VC/GroupVC.swift; sourceTree = "<group>"; };
 		D772426E1FDB74BE0082DD6D /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		D77242701FDB77370082DD6D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D77242721FDB776D0082DD6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				D7F0346D1FD3BD6D001D9046 /* AppDelegate.swift */,
 				D7F034A41FD3DDDB001D9046 /* LoginViewController.swift */,
 				D77242761FDB999E0082DD6D /* EventListVC.swift */,
+				D735E59D1FE10CAB004C1C09 /* GroupVC.swift */,
 				D77242781FDCCC880082DD6D /* EventVC.swift */,
 				D7F034A81FD526C2001D9046 /* Event.swift */,
 				D772427A1FDCDD250082DD6D /* Message.swift */,
@@ -503,6 +506,7 @@
 				D77242731FDB776D0082DD6D /* Constants.swift in Sources */,
 				D772427D1FDCDE240082DD6D /* MessageVC.swift in Sources */,
 				D77242831FDD2FF10082DD6D /* SermonVC.swift in Sources */,
+				D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */,
 				D77242771FDB999E0082DD6D /* EventListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

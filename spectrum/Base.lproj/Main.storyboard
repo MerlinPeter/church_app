@@ -240,7 +240,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Messages" id="asz-Zs-jux">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xC2-Sz-uj3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="xC2-Sz-uj3">
                             <connections>
                                 <segue destination="koF-GN-Rkn" kind="show" id="ZhU-1x-HRV"/>
                             </connections>
@@ -266,8 +266,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vnr-Jl-DsH" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="duh-xm-af5" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="vnr-Jl-DsH" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Lxe-YY-6M4" kind="relationship" relationship="viewControllers" id="8sD-2I-T0Z"/>
                     </connections>
                 </tabBarController>
@@ -527,7 +527,14 @@
                             <constraint firstItem="HDJ-8j-79m" firstAttribute="height" secondItem="Nnf-K2-0yP" secondAttribute="height" multiplier="0.7" id="xWG-dz-3g5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Message" id="Q64-QU-ji8">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Q64-QU-ji8">
+                        <barButtonItem key="leftBarButtonItem" title="New Group" id="T2c-f1-3j6">
+                            <connections>
+                                <action selector="messageSave:" destination="koF-GN-Rkn" id="zwr-aM-DYx"/>
+                                <segue destination="hCy-Fo-66g" kind="show" id="eFJ-Pe-NXA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Send" id="uXb-zk-0wa">
                             <connections>
                                 <action selector="messageSave:" destination="koF-GN-Rkn" id="ERw-tq-vIe"/>
@@ -542,6 +549,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgO-tb-frh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2471" y="359"/>
+        </scene>
+        <!--New Group-->
+        <scene sceneID="lu5-HG-JCJ">
+            <objects>
+                <viewController id="hCy-Fo-66g" userLabel="New Group" customClass="GroupVC" customModule="spectrum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="glv-El-fnJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aPW-5R-O1G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kYp-6A-i1m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UGL-Aq-tJr">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Np-Az-YSn">
+                                <rect key="frame" x="28" y="97" width="319" height="355"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyl-tY-DKw">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="gTP-da-y0F"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fya-f9-CeH" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                        <rect key="frame" x="0.0" y="145" width="319" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ata-dJ-gh5"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value=" Title"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value=" Title"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L5H-Yi-6uh">
+                                        <rect key="frame" x="0.0" y="205" width="319" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="ImI-Yh-9D0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Np-Az-YSn" firstAttribute="width" secondItem="kYp-6A-i1m" secondAttribute="width" multiplier="0.85" id="LZk-Vd-62Y"/>
+                            <constraint firstItem="0Np-Az-YSn" firstAttribute="top" secondItem="glv-El-fnJ" secondAttribute="bottom" constant="33" id="WT2-lu-H9n"/>
+                            <constraint firstItem="0Np-Az-YSn" firstAttribute="centerX" secondItem="kYp-6A-i1m" secondAttribute="centerX" id="vUM-8o-caB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Group" id="lw9-4W-WRL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KWW-tH-bwP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="UGL-Aq-tJr" id="srZ-yG-rEV"/>
+                        <outlet property="groupDiscription" destination="L5H-Yi-6uh" id="YB6-2s-wMU"/>
+                        <outlet property="groupTitle" destination="Fya-f9-CeH" id="qu7-8Q-Tow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gg8-eK-4XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3262" y="358"/>
         </scene>
     </scenes>
     <resources>
