@@ -30,6 +30,15 @@ class DBHelper {
         })
     }
     
+    //MARK:-- Insert Group
+    static func insertGroup(parent:String, group: Group ,completion: @escaping (Error?, DatabaseReference) -> ())  {
+        let key = DataService.data_service.FIREBASE_BASE_REF.child(FIREBASE_CONTSTANTS.groupRoot).child(parent).childByAutoId()
+        key.setValue(group.toAnyObject(), withCompletionBlock: { (error, snapshot) in
+            
+            completion(error, snapshot)
+        })
+    }
+    
     //MARK:-- Insert Message
     static func insertMessage(parent:String, message: Message ,completion: @escaping (Error?, DatabaseReference) -> ())  {
         let key = DataService.data_service.FIREBASE_BASE_REF.child(FIREBASE_CONTSTANTS.messageRoot).child(parent).childByAutoId()

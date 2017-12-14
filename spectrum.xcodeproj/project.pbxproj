@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		308BD0CE8DF1F883E95F083F /* Pods_spectrumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6BED1775C6072E061A3D8E /* Pods_spectrumUITests.framework */; };
 		59B515878C9B22973B0DAA5E /* Pods_spectrumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */; };
+		7E9FFEFC1FE1B10700AB09A5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FFEFB1FE1B10700AB09A5 /* Group.swift */; };
+		7E9FFEFD1FE1B57000AB09A5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FFEFB1FE1B10700AB09A5 /* Group.swift */; };
 		D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59D1FE10CAB004C1C09 /* GroupVC.swift */; };
 		D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772426E1FDB74BE0082DD6D /* DBHelper.swift */; };
 		D77242711FDB77370082DD6D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242701FDB77370082DD6D /* DataService.swift */; };
@@ -57,6 +59,7 @@
 		2E4ED3D1BA96E13572DDDFFB /* Pods-spectrum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.debug.xcconfig"; sourceTree = "<group>"; };
 		54CAE083A1E3FFDF77A25BD9 /* Pods-spectrumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumUITests/Pods-spectrumUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6562969DA81E92045FC0AFD6 /* Pods-spectrumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E9FFEFB1FE1B10700AB09A5 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Model/Group.swift; sourceTree = "<group>"; };
 		8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 				D735E59D1FE10CAB004C1C09 /* GroupVC.swift */,
 				D77242781FDCCC880082DD6D /* EventVC.swift */,
 				D7F034A81FD526C2001D9046 /* Event.swift */,
+				7E9FFEFB1FE1B10700AB09A5 /* Group.swift */,
 				D772427A1FDCDD250082DD6D /* Message.swift */,
 				D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */,
 				D772427C1FDCDE240082DD6D /* MessageVC.swift */,
@@ -497,6 +501,7 @@
 				D7F034A51FD3DDDB001D9046 /* LoginViewController.swift in Sources */,
 				D7F0346E1FD3BD6D001D9046 /* AppDelegate.swift in Sources */,
 				D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */,
+				7E9FFEFC1FE1B10700AB09A5 /* Group.swift in Sources */,
 				D772427F1FDCDE8E0082DD6D /* MessageListVC.swift in Sources */,
 				D7F034A91FD526C2001D9046 /* Event.swift in Sources */,
 				D77242711FDB77370082DD6D /* DataService.swift in Sources */,
@@ -516,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F034851FD3BD6D001D9046 /* spectrumTests.swift in Sources */,
+				7E9FFEFD1FE1B57000AB09A5 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

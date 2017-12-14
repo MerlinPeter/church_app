@@ -19,22 +19,21 @@ class GroupVC: BaseVC {
     
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
     
     
     
     @IBAction func groupSave(_ sender: UIBarButtonItem) {
         
-       /* if let location = location.text,!location.isEmpty,
-            let eventTitle = eventTitle.text,!eventTitle.isEmpty,
-            let eventDiscrption = eventDiscrption.text ,!eventDiscrption.isEmpty
+       if let groupTitle = groupTitle.text,!groupTitle.isEmpty,
+            let groupDiscription = groupDiscription.text ,!groupDiscription.isEmpty
             {
-            let eventDate = self.eventDate.date
+            let createDate = Date().timeIntervalSince1970
             activityIndicator.startAnimating()
-                 let newEvent = Event(imageUrl: "", title: eventTitle, eventDescription: eventDiscrption, date: Int(eventDate.timeIntervalSince1970))
+                 let newGroup = Group(imageUrl: "", title: groupTitle, eventDescription: groupDiscription, date: Int(createDate), status: GROUP_STATUS.active)
             
-            DBHelper.insertEvent(parent: "Spectrum", event: newEvent,  completion: { error , snapshot  in
+            DBHelper.insertGroup(parent: APP_CONTSTANTS.parent, group: newGroup,  completion: { error , snapshot  in
                 
                 if let error = error {
                     print(error.localizedDescription)
@@ -43,13 +42,13 @@ class GroupVC: BaseVC {
                 
                 if (error == nil){
                     
-                    self.alert(message: "New Event Saved")
+                    self.alert(message: "New Group Created")
                 }
                 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
-                    self.eventTitle.text = ""
-                    self.eventDiscrption.text = ""
+                    self.groupTitle.text = ""
+                    self.groupDiscription.text = ""
                 }
             })
         }else{
@@ -58,8 +57,9 @@ class GroupVC: BaseVC {
         }
         
         
-    }*/
     }
-
+    
 }
+
+
 
