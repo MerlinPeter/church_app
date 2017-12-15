@@ -32,7 +32,6 @@ class Group: NSObject {
         
     }
     
-    
     init?(snapshot: DataSnapshot) {
         key = snapshot.key
         guard let snapshotValue = (snapshot.value as? [String: AnyObject]) else { return nil }
@@ -44,14 +43,13 @@ class Group: NSObject {
         ref = snapshot.ref
     }
     
-    
-    func toAnyObject() -> Any {
+     func toAnyObject() -> Any {
         return [
             "date": date,
             "description": groupDescription,
             "imgUrl": imageUrl,
             "title": title,
-            "status": status
+            "status": status.rawValue
          ]
     }
     

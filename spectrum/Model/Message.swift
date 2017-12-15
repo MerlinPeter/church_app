@@ -17,9 +17,10 @@ class Message: NSObject {
     var message: String
     var imageUrl: String
     var author: String
+    var group: String
      let ref: DatabaseReference?
     
-    init(imageUrl: String, message: String  ,author: String,date: Int  ,key: String = ""){
+    init(imageUrl: String, message: String  ,author: String,date: Int, key: String = "" , group:String = "private"){
         
         self.imageUrl = imageUrl
         self.message = message
@@ -27,6 +28,7 @@ class Message: NSObject {
         self.date = date
         self.ref = nil
         self.key = key
+        self.group = group
         
     }
     
@@ -38,6 +40,8 @@ class Message: NSObject {
         message = snapshotValue["message"] as? String ?? ""
         author = snapshotValue["author"] as? String ?? ""
         date = snapshotValue["date"] as! Int
+        group = snapshotValue["group"] as? String ?? ""
+ 
         ref = snapshot.ref
     }
     
@@ -48,6 +52,7 @@ class Message: NSObject {
             "date": date,
             "message": message,
             "imgUrl": imageUrl,
+            "group": group,
             "author": author
             
         ]

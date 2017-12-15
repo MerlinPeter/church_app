@@ -6,7 +6,7 @@
 //  Copyright © 2017 Merlin Ahila. All rights reserved.
 //
 enum APP_CONTSTANTS {
-    static let parent = "spectrum"
+    static let parent = "Spectrum"
 }
 
 
@@ -16,8 +16,12 @@ enum FIREBASE_CONTSTANTS {
     static let messageRoot = "messages"
 }
 
-enum GROUP_STATUS  {
-    case active
-    case inactive
-    case unknown
+enum GROUP_STATUS : String  {
+    case active = "active"
+    case inactive = "inactive"
+    case unknown = "unknown"
 }
+
+
+
+

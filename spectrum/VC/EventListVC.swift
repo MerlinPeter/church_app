@@ -13,7 +13,7 @@ import FirebaseDatabaseUI
 class EventListVC: BaseVC  {
     
     var dataSource: FUITableViewDataSource?
-    var churchKey :String = "Spectrum"
+    var churchKey :String = APP_CONTSTANTS.parent
     var editRecord : Bool = false
 
     @IBOutlet weak var tableView: UITableView!

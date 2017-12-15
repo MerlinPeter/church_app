@@ -8,31 +8,39 @@
 
 import UIKit
 import FirebaseAuth
+
 class MessageVC: BaseVC {
     
 
     var author:String!
+    var groupKey:String!
+    var groupName:String!
     
+    @IBOutlet var groupTitle: UILabel!
     @IBOutlet weak var message: UITextView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         
-    }
+        groupTitle.text = "Posting in " + groupName 
+        
+     }
     
     
     
     @IBAction func messageSave(_ sender: UIBarButtonItem) {
         
-        if let message = message.text,!message.isEmpty,
-            let author = Auth.auth().currentUser?.email
+        if  let message = message.text,!message.isEmpty,
+            let author = Auth.auth().currentUser?.email,
+            let groupKey = groupKey
              {
              activityIndicator.startAnimating()
                 
-                let newMessage = Message(imageUrl: "", message: message, author: author, date: Int(Date().timeIntervalSince1970))
+                
+                let newMessage = Message(imageUrl: "", message: message, author: author, date: Int(Date().timeIntervalSince1970), group: groupKey)
             
-            DBHelper.insertMessage(parent: "Spectrum", message: newMessage,  completion: { error , snapshot  in
+            DBHelper.insertMessage(parent: APP_CONTSTANTS.parent, message: newMessage,  completion: { error , snapshot  in
                 
                 if let error = error {
                     print(error.localizedDescription)
@@ -40,9 +48,20 @@ class MessageVC: BaseVC {
                 }
                 
                 if (error == nil){
-                    
-                    self.alert(message: " Message Posted")
-                }
+     
+                 var vc = self.navigationController!.viewControllers
+ 
+                    /* remove the search controller and new message */
+                    vc.remove(at: 2)
+                    vc.remove(at: 1)
+                    /* push the message list*/
+                    let MessageListVC = self.storyboard!.instantiateViewController(withIdentifier: "MessageListVC") as? MessageListVC
+                    MessageListVC?.churchKey = APP_CONTSTANTS.parent
+                    MessageListVC?.group = Group(imageUrl: "", title: self.groupName, eventDescription: "", date: 0, status: GROUP_STATUS.active, key: groupKey)
+                    vc.insert(MessageListVC!, at: 1)
+                    self.navigationController?.setViewControllers(vc, animated: true)
+
+                 }
                 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()

@@ -39,7 +39,7 @@ class EventVC: BaseVC {
             activityIndicator.startAnimating()
                  let newEvent = Event(imageUrl: "", title: eventTitle, eventDescription: eventDiscrption, date: Int(eventDate.timeIntervalSince1970))
             
-            DBHelper.insertEvent(parent: "Spectrum", event: newEvent,  completion: { error , snapshot  in
+            DBHelper.insertEvent(parent: APP_CONTSTANTS.parent, event: newEvent,  completion: { error , snapshot  in
                 
                 if let error = error {
                     print(error.localizedDescription)
