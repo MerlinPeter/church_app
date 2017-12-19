@@ -11,6 +11,17 @@
 		59B515878C9B22973B0DAA5E /* Pods_spectrumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */; };
 		7E9FFEFC1FE1B10700AB09A5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FFEFB1FE1B10700AB09A5 /* Group.swift */; };
 		7E9FFEFD1FE1B57000AB09A5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FFEFB1FE1B10700AB09A5 /* Group.swift */; };
+		D71520D01FE78C1B00E6F804 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520CF1FE78C1B00E6F804 /* ChatViewController.swift */; };
+		D71520D21FE796DE00E6F804 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520D11FE796DE00E6F804 /* ChatDataSource.swift */; };
+		D71520D41FE797E100E6F804 /* ChatItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520D31FE797E100E6F804 /* ChatItemController.swift */; };
+		D71520D61FE7985E00E6F804 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520D51FE7985E00E6F804 /* Me.swift */; };
+		D71520D81FE79C6300E6F804 /* TextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520D71FE79C6300E6F804 /* TextModel.swift */; };
+		D71520DA1FE79C9700E6F804 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520D91FE79C9700E6F804 /* PhotoModel.swift */; };
+		D71520DC1FE7A06F00E6F804 /* PhotoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520DB1FE7A06F00E6F804 /* PhotoHandler.swift */; };
+		D71520DE1FE7A08000E6F804 /* TextHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520DD1FE7A08000E6F804 /* TextHandler.swift */; };
+		D71520E01FE7A10B00E6F804 /* TextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520DF1FE7A10B00E6F804 /* TextBuilder.swift */; };
+		D71520E21FE7A11E00E6F804 /* PhotoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520E11FE7A11E00E6F804 /* PhotoBuilder.swift */; };
+		D71520E41FE7A21900E6F804 /* avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520E31FE7A21900E6F804 /* avatar.swift */; };
 		D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59D1FE10CAB004C1C09 /* GroupVC.swift */; };
 		D735E5A01FE25A18004C1C09 /* GroupListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59F1FE25A18004C1C09 /* GroupListVC.swift */; };
 		D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772426E1FDB74BE0082DD6D /* DBHelper.swift */; };
@@ -64,6 +75,17 @@
 		8E868EAA4406C84D5268F590 /* Pods_spectrumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_spectrumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C408652290B937640F227C0C /* Pods-spectrumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spectrumTests/Pods-spectrumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB914C7B65F39FA25DF173AA /* Pods-spectrum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spectrum.release.xcconfig"; path = "Pods/Target Support Files/Pods-spectrum/Pods-spectrum.release.xcconfig"; sourceTree = "<group>"; };
+		D71520CF1FE78C1B00E6F804 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = VC/ChatViewController.swift; sourceTree = "<group>"; };
+		D71520D11FE796DE00E6F804 /* ChatDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatDataSource.swift; path = VC/ChatDataSource.swift; sourceTree = "<group>"; };
+		D71520D31FE797E100E6F804 /* ChatItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatItemController.swift; path = VC/ChatItemController.swift; sourceTree = "<group>"; };
+		D71520D51FE7985E00E6F804 /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Me.swift; path = VC/Me.swift; sourceTree = "<group>"; };
+		D71520D71FE79C6300E6F804 /* TextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModel.swift; sourceTree = "<group>"; };
+		D71520D91FE79C9700E6F804 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		D71520DB1FE7A06F00E6F804 /* PhotoHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoHandler.swift; sourceTree = "<group>"; };
+		D71520DD1FE7A08000E6F804 /* TextHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextHandler.swift; sourceTree = "<group>"; };
+		D71520DF1FE7A10B00E6F804 /* TextBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBuilder.swift; sourceTree = "<group>"; };
+		D71520E11FE7A11E00E6F804 /* PhotoBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBuilder.swift; sourceTree = "<group>"; };
+		D71520E31FE7A21900E6F804 /* avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = avatar.swift; sourceTree = "<group>"; };
 		D735E59D1FE10CAB004C1C09 /* GroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupVC.swift; path = VC/GroupVC.swift; sourceTree = "<group>"; };
 		D735E59F1FE25A18004C1C09 /* GroupListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupListVC.swift; path = VC/GroupListVC.swift; sourceTree = "<group>"; };
 		D772426E1FDB74BE0082DD6D /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
@@ -185,6 +207,17 @@
 				D735E59F1FE25A18004C1C09 /* GroupListVC.swift */,
 				D772427A1FDCDD250082DD6D /* Message.swift */,
 				D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */,
+				D71520CF1FE78C1B00E6F804 /* ChatViewController.swift */,
+				D71520D11FE796DE00E6F804 /* ChatDataSource.swift */,
+				D71520E11FE7A11E00E6F804 /* PhotoBuilder.swift */,
+				D71520DB1FE7A06F00E6F804 /* PhotoHandler.swift */,
+				D71520D91FE79C9700E6F804 /* PhotoModel.swift */,
+				D71520D71FE79C6300E6F804 /* TextModel.swift */,
+				D71520E31FE7A21900E6F804 /* avatar.swift */,
+				D71520DF1FE7A10B00E6F804 /* TextBuilder.swift */,
+				D71520DD1FE7A08000E6F804 /* TextHandler.swift */,
+				D71520D31FE797E100E6F804 /* ChatItemController.swift */,
+				D71520D51FE7985E00E6F804 /* Me.swift */,
 				D772427C1FDCDE240082DD6D /* MessageVC.swift */,
 				D7F034731FD3BD6D001D9046 /* Main.storyboard */,
 				D77242821FDD2FF10082DD6D /* SermonVC.swift */,
@@ -504,18 +537,29 @@
 				D7F034A51FD3DDDB001D9046 /* LoginViewController.swift in Sources */,
 				D7F0346E1FD3BD6D001D9046 /* AppDelegate.swift in Sources */,
 				D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */,
+				D71520D81FE79C6300E6F804 /* TextModel.swift in Sources */,
 				7E9FFEFC1FE1B10700AB09A5 /* Group.swift in Sources */,
 				D772427F1FDCDE8E0082DD6D /* MessageListVC.swift in Sources */,
+				D71520D41FE797E100E6F804 /* ChatItemController.swift in Sources */,
 				D7F034A91FD526C2001D9046 /* Event.swift in Sources */,
+				D71520DA1FE79C9700E6F804 /* PhotoModel.swift in Sources */,
 				D77242711FDB77370082DD6D /* DataService.swift in Sources */,
+				D71520E21FE7A11E00E6F804 /* PhotoBuilder.swift in Sources */,
+				D71520D01FE78C1B00E6F804 /* ChatViewController.swift in Sources */,
 				D77242791FDCCC880082DD6D /* EventVC.swift in Sources */,
 				D77242811FDD0B300082DD6D /* BaseVC.swift in Sources */,
+				D71520D21FE796DE00E6F804 /* ChatDataSource.swift in Sources */,
 				D772427B1FDCDD250082DD6D /* Message.swift in Sources */,
+				D71520E41FE7A21900E6F804 /* avatar.swift in Sources */,
+				D71520DE1FE7A08000E6F804 /* TextHandler.swift in Sources */,
+				D71520D61FE7985E00E6F804 /* Me.swift in Sources */,
 				D77242731FDB776D0082DD6D /* Constants.swift in Sources */,
 				D772427D1FDCDE240082DD6D /* MessageVC.swift in Sources */,
 				D77242831FDD2FF10082DD6D /* SermonVC.swift in Sources */,
+				D71520DC1FE7A06F00E6F804 /* PhotoHandler.swift in Sources */,
 				D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */,
 				D735E5A01FE25A18004C1C09 /* GroupListVC.swift in Sources */,
+				D71520E01FE7A10B00E6F804 /* TextBuilder.swift in Sources */,
 				D77242771FDB999E0082DD6D /* EventListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,12 @@ target 'spectrum' do
   
   #camera manager
   #pod 'ALCameraViewController', '~> 2.0.0'
-
+  
+  
+  #chat
+  
+  pod 'Chatto', '= 3.2.0'
+  pod 'ChattoAdditions', '= 3.2.0'
 
   #Floating LAbel
   pod 'SkyFloatingLabelTextField', '~> 3.0'
