@@ -22,6 +22,7 @@ class ChatDataSource: ChatDataSourceProtocol {
         self.controller.initialMessages = initialMessages
         self.controller.userUID = uid
         self.controller.loadIntoItemArray(neededMsg: min(initialMessages.count, 50), moreToLoad: initialMessages.count > 50)
+    
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateLoadingPhoto),

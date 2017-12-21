@@ -8,13 +8,21 @@
 
 import Chatto
 import ChattoAdditions
+import FirebaseDatabaseUI
 
 class ChatViewController: BaseChatViewController {
     var dataSource: ChatDataSource!
+    var decorator = Decorator()
+    var messageArray: FUIArray!
+    var userUID = String()
 
+    
+    var presenter: BasicChatInputBarPresenter!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.chatDataSource = dataSource
+        
       
         let senderId = Me.uid
         let model = MessageModel(
@@ -32,7 +40,10 @@ class ChatViewController: BaseChatViewController {
             dataSource = ChatDataSource(initialMessages: [textMessage,textMessage1], uid: Me.uid)
         }
            self.dataSource.addMessage(message: textMessage)
-        
+        self.chatItemsDecorator = decorator
+        self.chatDataSource = dataSource
+
+
      }
     
     var chatInputPresenter: BasicChatInputBarPresenter!
@@ -42,7 +53,7 @@ class ChatViewController: BaseChatViewController {
         var appearance = ChatInputBarAppearance()
         appearance.sendButtonAppearance.title = NSLocalizedString("Send", comment: "")
         appearance.textInputAppearance.placeholderText = NSLocalizedString("Type a message", comment: "")
-        self.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
+        self.presenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
         chatInputView.maxCharactersCount = 1000
         return chatInputView
     }
