@@ -1,6 +1,6 @@
 //
 //  BaseChatViewController.swift
-//  
+//
 //
 //  Created by Merlin Ahila on 12/17/17.
 //
@@ -11,41 +11,57 @@ import ChattoAdditions
 import FirebaseDatabaseUI
 
 class ChatViewController: BaseChatViewController {
+    
     var dataSource: ChatDataSource!
     var decorator = Decorator()
-    var messageArray: FUIArray!
+    var group: Group?
+    var churchKey :String = APP_CONTSTANTS.parent
+    var messageArray : FUIArray!
     var userUID = String()
-
-    
     var presenter: BasicChatInputBarPresenter!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-        let senderId = Me.uid
-        let model = MessageModel(
-            uid: Me.uid,
-            senderId: senderId,
-            type: "text",
-            isIncoming: senderId == Me.uid ? false : true,
-            date: Date(timeIntervalSinceReferenceDate: 50505050.00),
-            status:  MessageStatus.success          )
         
-        let textMessage = TextModel(messageModel: model, text: "Hello World")
-        let textMessage1 = TextModel(messageModel: model, text: "Hello World 2")
-        
-        if dataSource == nil {
-            dataSource = ChatDataSource(initialMessages: [textMessage,textMessage1], uid: Me.uid)
-        }
-           self.dataSource.addMessage(message: textMessage)
         self.chatItemsDecorator = decorator
-        self.chatDataSource = dataSource
-
-
-     }
+        guard  let group = group  else {
+            return
+        }
+        self.navigationItem.title = group.title
+        
+        
+        messageArray =  FUIArray(
+            query: DataService.data_service.FIREBASE_BASE_REF.child(FIREBASE_CONTSTANTS.messageRoot).child(APP_CONTSTANTS.parent).queryOrdered(byChild: "group").queryEqual(toValue: group.key )
+            ,
+            delegate: nil)
+        
+        self.messageArray.observeQuery()
+        self.messageArray.delegate = self
+        
+    }
     
+    @IBAction func composeAction(_ sender: Any) {
+        
+        guard  group != nil  else {
+            return
+        }
+        performSegue(withIdentifier: "NewMessageSegue", sender:  group)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard sender != nil else {
+            return
+        }
+        
+        if  let destinationVC = segue.destination as? MessageVC ,
+            let group = sender as? Group{
+            destinationVC.groupKey = group.key
+            destinationVC.groupName = group.title
+        }
+    }
     var chatInputPresenter: BasicChatInputBarPresenter!
     override func createChatInputView() -> UIView {
         
@@ -55,6 +71,7 @@ class ChatViewController: BaseChatViewController {
         appearance.textInputAppearance.placeholderText = NSLocalizedString("Type a message", comment: "")
         self.presenter = BasicChatInputBarPresenter(chatInputBar: chatInputView, chatInputItems: self.createChatInputItems(), chatInputBarAppearance: appearance)
         chatInputView.maxCharactersCount = 1000
+        chatInputView.alpha = 0
         return chatInputView
     }
     
@@ -86,7 +103,7 @@ class ChatViewController: BaseChatViewController {
             
             let textMessage = TextModel(messageModel: message, text: text)
             self?.dataSource.addMessage(message: textMessage)
-          //  self?.sendOnlineTextMsg(text: text, uid: msgUID, double: double, senderId: senderID)
+            //  self?.sendOnlineTextMsg(text: text, uid: msgUID, double: double, senderId: senderID)
             
         }
         return item
@@ -99,21 +116,70 @@ class ChatViewController: BaseChatViewController {
         }
         return item
     }
-  
+    
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
+        
         let textMessageBuilder = TextMessagePresenterBuilder(viewModelBuilder: TextBuilder(), interactionHandler: TaxtHandler())
         
         
         let photoMessageBuilder = PhotoMessagePresenterBuilder(viewModelBuilder: PhotoBuilder(), interactionHandler: PhotoHandler())
         
-        textMessageBuilder.baseMessageStyle = Avatar()
+        textMessageBuilder.baseMessageStyle =  Avatar()
+        
+         textMessageBuilder.textCellStyle = ChurchViewCellStyle()
+        
         photoMessageBuilder.baseCellStyle = Avatar()
         
         return [
             TextModel.chatItemType : [textMessageBuilder],
             PhotoModel.chatItemType: [photoMessageBuilder],
-           // TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
-           // SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
+            // TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
+            // SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
         ]
     }
 }
+
+extension ChatViewController : FUICollectionDelegate{
+    func array(_ array: FUICollection, didAdd object: Any, at index: UInt) {
+        
+        let message = Message(snapshot: object as! DataSnapshot)
+        let type =  "text"
+        let uid = message?.key
+        
+        
+        let contains = false
+        if contains == false {
+            let senderId =  Me.uid
+            let model = MessageModel(
+                uid: uid!,
+                senderId: senderId,
+                type: type,
+                isIncoming: senderId == Me.uid ? false : true,
+                date: Date(timeIntervalSinceReferenceDate: Double((message?.date)!)),
+                status: MessageStatus.success
+            )
+            
+            
+            if type == TextModel.chatItemType {
+                let textMessage = TextModel(messageModel: model, text: (message?.message)!)
+                if self.dataSource == nil {
+                    dataSource = ChatDataSource(initialMessages: [textMessage], uid: Me.uid)
+                }else{
+                    
+                    self.dataSource.addMessage(message: textMessage)
+                }
+            }
+            
+        }
+        
+    }
+    
+    func arrayDidEndUpdates(_ collection: FUICollection) {
+        self.chatDataSource = dataSource
+        
+    }
+    
+    
+    
+}
+

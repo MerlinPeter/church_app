@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "spectrum/VC/MessageVC.swift"
-            timestampString = "535011183.10273"
+            filePath = "spectrum/VC/ChatItemController.swift"
+            timestampString = "535274245.086125"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "messageSave(_:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "loadPrevious(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "spectrum/VC/ChatItemController.swift"
-            timestampString = "535274245.086125"
+            filePath = "spectrum/VC/MessageListVC.swift"
+            timestampString = "535532668.155437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "loadPrevious(completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

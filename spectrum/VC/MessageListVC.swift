@@ -39,8 +39,7 @@ class MessageListVC: BaseVC  {
             if let message = Message(snapshot: snap){
                 cell.textLabel?.text = message.author
                 cell.detailTextLabel?.text = message.message
-                 
-            }
+             }
             return cell
         })
         dataSource?.bind(to: tableView)
@@ -91,6 +90,7 @@ class MessageListVC: BaseVC  {
 class PostDataSource: FUITableViewDataSource {
     
     
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
         return true
@@ -106,6 +106,8 @@ class PostDataSource: FUITableViewDataSource {
          
          }
     }
+    
+    
     
     
     

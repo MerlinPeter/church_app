@@ -55,7 +55,7 @@ class MessageVC: BaseVC {
                     vc.remove(at: 2)
                     vc.remove(at: 1)
                     /* push the message list*/
-                    let MessageListVC = self.storyboard!.instantiateViewController(withIdentifier: "MessageListVC") as? MessageListVC
+                    let MessageListVC = self.storyboard!.instantiateViewController(withIdentifier: "MessageListVC") as? ChatViewController
                     MessageListVC?.churchKey = APP_CONTSTANTS.parent
                     MessageListVC?.group = Group(imageUrl: "", title: self.groupName, eventDescription: "", date: 0, status: GROUP_STATUS.active, key: groupKey)
                     vc.insert(MessageListVC!, at: 1)

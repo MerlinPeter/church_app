@@ -22,7 +22,8 @@ class EventListVC: BaseVC  {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+
         let query = DataService.data_service.FIREBASE_BASE_REF.child(FIREBASE_CONTSTANTS.eventRoot).child(churchKey).queryOrderedByKey()
         
         dataSource = PostDataSource.init(query: query , populateCell: { (tableView: UITableView, indexPath: IndexPath, snap: DataSnapshot) -> UITableViewCell in

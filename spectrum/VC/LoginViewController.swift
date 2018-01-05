@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
-     
+      
         
         passwordText.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         userNameText.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)

@@ -1,7 +1,7 @@
 //
 //  TextModel.swift
 //
-//  Copyright © 2017 Alif. All rights reserved.
+//  Copyright © 2017 . All rights reserved.
 //
 
 import Foundation

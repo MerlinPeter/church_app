@@ -8,6 +8,10 @@
 
 import UIKit
 class BaseVC: UIViewController {
+    
+    
+
+    
     func alert(title:String = "Spectrum",message:String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

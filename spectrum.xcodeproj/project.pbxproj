@@ -24,6 +24,7 @@
 		D71520E41FE7A21900E6F804 /* avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71520E31FE7A21900E6F804 /* avatar.swift */; };
 		D735E59E1FE10CAB004C1C09 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59D1FE10CAB004C1C09 /* GroupVC.swift */; };
 		D735E5A01FE25A18004C1C09 /* GroupListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735E59F1FE25A18004C1C09 /* GroupListVC.swift */; };
+		D76BCAB61FEE3B4C004132D2 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BCAB51FEE3B4C004132D2 /* GroupCell.swift */; };
 		D772426F1FDB74BE0082DD6D /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772426E1FDB74BE0082DD6D /* DBHelper.swift */; };
 		D77242711FDB77370082DD6D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242701FDB77370082DD6D /* DataService.swift */; };
 		D77242731FDB776D0082DD6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77242721FDB776D0082DD6D /* Constants.swift */; };
@@ -89,6 +90,7 @@
 		D71520E31FE7A21900E6F804 /* avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = avatar.swift; sourceTree = "<group>"; };
 		D735E59D1FE10CAB004C1C09 /* GroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupVC.swift; path = VC/GroupVC.swift; sourceTree = "<group>"; };
 		D735E59F1FE25A18004C1C09 /* GroupListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupListVC.swift; path = VC/GroupListVC.swift; sourceTree = "<group>"; };
+		D76BCAB51FEE3B4C004132D2 /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupCell.swift; path = VC/GroupCell.swift; sourceTree = "<group>"; };
 		D772426E1FDB74BE0082DD6D /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		D77242701FDB77370082DD6D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D77242721FDB776D0082DD6D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				D7F034A81FD526C2001D9046 /* Event.swift */,
 				7E9FFEFB1FE1B10700AB09A5 /* Group.swift */,
 				D735E59F1FE25A18004C1C09 /* GroupListVC.swift */,
+				D76BCAB51FEE3B4C004132D2 /* GroupCell.swift */,
 				D772427A1FDCDD250082DD6D /* Message.swift */,
 				D772427E1FDCDE8E0082DD6D /* MessageListVC.swift */,
 				D7B934521FE9E8040014F4D5 /* Decorator.swift */,
@@ -551,6 +554,7 @@
 				D71520D01FE78C1B00E6F804 /* ChatViewController.swift in Sources */,
 				D77242791FDCCC880082DD6D /* EventVC.swift in Sources */,
 				D7B934531FE9E8040014F4D5 /* Decorator.swift in Sources */,
+				D76BCAB61FEE3B4C004132D2 /* GroupCell.swift in Sources */,
 				D77242811FDD0B300082DD6D /* BaseVC.swift in Sources */,
 				D71520D21FE796DE00E6F804 /* ChatDataSource.swift in Sources */,
 				D772427B1FDCDD250082DD6D /* Message.swift in Sources */,
