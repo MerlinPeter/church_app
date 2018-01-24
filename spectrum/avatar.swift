@@ -11,6 +11,8 @@ class Avatar: BaseMessageCollectionViewCellDefaultStyle   {
     override func avatarSize(viewModel: MessageViewModelProtocol) -> CGSize {
         return CGSize(width: 30, height: 30)
     }
+    
+    
   
   }
 class ChurchViewCellStyle : TextMessageCollectionViewCellDefaultStyle {

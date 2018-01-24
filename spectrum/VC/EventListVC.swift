@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseDatabaseUI
 
+import FirebaseAuth
+
 
 class EventListVC: BaseVC  {
     
@@ -42,6 +44,14 @@ class EventListVC: BaseVC  {
         dataSource?.bind(to: tableView)
     }
     
+    @IBAction func signOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
     
 }
 

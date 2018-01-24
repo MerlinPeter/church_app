@@ -42,12 +42,28 @@ class Decorator: ChatItemsDecoratorProtocol {
             
             let buttomMargin = separationAfterItem(current: item, next: nextMessage)
             let decoratedItem = DecoratedChatItem(chatItem: item, decorationAttributes: ChatItemDecorationAttributes(bottomMargin: buttomMargin, canShowTail: showTail, canShowAvatar: showTail, canShowFailedIcon: false))
+        
             decoratedItems.append(decoratedItem)
             
            /* if let status = (item as? MessageModelProtocol)?.status, status != .success {
                let statusModel = SendingStatusModel(uid: UUID().uuidString, status: status)
                 decoratedItems.append(DecoratedChatItem(chatItem: statusModel, decorationAttributes: nil))
             }*/
+            
+            /*username label*/
+            if let currentMessage = item as? MessageModelProtocol {
+                
+                if currentMessage.senderId != Me.uid && showTail == true
+                {
+                    // Get Username
+                    
+                    //TODO: Get the username from the Database and insert as name
+                    
+                    let nameModel = NameModel(name: currentMessage.senderId.components(separatedBy: "@").first!, uid: UUID().uuidString)
+                    decoratedItems.append(DecoratedChatItem(chatItem: nameModel, decorationAttributes: nil))
+                    
+                }
+            }
         
         }
         

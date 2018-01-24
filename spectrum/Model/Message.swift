@@ -57,8 +57,7 @@ class Message: NSObject {
             
         ]
     }
-    
-    
+     
 }
 extension Message {
     func stringActDate()->String{

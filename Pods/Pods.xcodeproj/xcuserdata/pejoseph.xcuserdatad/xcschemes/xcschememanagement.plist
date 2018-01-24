@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Chatto.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>ChattoAdditions.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -67,6 +77,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0564C2782D1F2F8E464CB332E0FE7246</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1E2DDF7B7BA5EFA63FC4ED2DCCA84B39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B08C49A396BAA0D9DCAD4460CC52F95</key>
 		<dict>
 			<key>primary</key>
@@ -82,7 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6EB01FD994DC50DEA2AFC920AEC1093A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8CC76609ADCDA8A9BFED951FE3BDB83B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A153C323490BCD311F24B51B7145A867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4F33D4FC32237AA830DEB2E3DD11592</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -113,6 +148,11 @@
 			<true/>
 		</dict>
 		<key>FE4F23AAE356F5FDF7E1B5EE74021987</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF4EC99AD008433A0D49AD8A36F28E8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
