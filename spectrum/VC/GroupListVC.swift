@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabaseUI
+import Chatto
+import ChattoAdditions
 
 
 class GroupListVC: BaseVC  {
@@ -71,9 +73,22 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
          }
         if  let destinationVC = segue.destination as? ChatViewController ,
             let groupSnap = sender as? DataSnapshot{
-             destinationVC.group = Group(snapshot: groupSnap)
-  
-        }
+            
+            
+            let selectedGroup = Group(snapshot: groupSnap)
+            let reference = DataService.data_service.FIREBASE_BASE_REF.child(FIREBASE_CONTSTANTS.messageRoot).child(APP_CONTSTANTS.parent).queryOrdered(byChild: "group").queryEqual(toValue: selectedGroup?.key )
+            reference.observeSingleEvent(of: .value, with: { [ weak self ] (snapshot)  in
+                var messageArray = [Message]()
+                
+                for rest in snapshot.children.allObjects as! [DataSnapshot] {
+                    messageArray.append(Message(snapshot: rest )!)
+ 
+                let converted = self?.convertToChatItemProtocol(messages: messageArray)
+                
+                destinationVC.dataSource = ChatDataSource(initialMessages: converted!, uid: (selectedGroup?.key)!)
+            }
+             })
+         }
         if  let destinationVC = segue.destination as? MessageVC ,
             let groupSnap = sender as? DataSnapshot{
             let group = Group(snapshot: groupSnap)
@@ -81,6 +96,31 @@ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) ->
             destinationVC.groupKey = group?.key
             
         }
+    }
+    
+    
+    func convertToChatItemProtocol(messages: [Message]) -> [ChatItemProtocol] {
+        var convertedMessages = [ChatItemProtocol]()
+        
+        convertedMessages = messages.map({ (message) -> ChatItemProtocol in
+            let senderId = message.author
+            let type = "text" //message.type
+            
+            let model = MessageModel(
+                uid: message.uid,
+                senderId: senderId,
+                type: type,
+                isIncoming: senderId == Me.uid ? false : true,
+                date: Date(timeIntervalSinceReferenceDate: Double(message.date)),
+                status: MessageStatus.success             )
+            
+                 let textMessage = TextModel(messageModel: model, text: message.message)
+                return textMessage
+            
+        })
+      
+        
+        return convertedMessages
     }
 }
 

@@ -1,7 +1,6 @@
 //
 //  BaseChatViewController.swift
 //
-//
 //  Created by Merlin Ahila on 12/17/17.
 //
 //
@@ -26,6 +25,7 @@ class ChatViewController: BaseChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.chatItemsDecorator = decorator
                        
         guard  let group = group  else {
@@ -41,6 +41,7 @@ class ChatViewController: BaseChatViewController {
         
         self.messageArray.observeQuery()
         self.messageArray.delegate = self
+        self.chatDataSource = dataSource
         
     }
     
@@ -162,10 +163,17 @@ extension ChatViewController : FUICollectionDelegate{
         let message = Message(snapshot: object as! DataSnapshot)
         let type =  "text"
         let uid = message?.key
-        let contains = self.dataSource.controller.items.contains { (collectionViewMessage) -> Bool in
-            return collectionViewMessage.uid == uid
+        var contains = true
+        if let datasource = self.dataSource{
+             contains = datasource.controller.items.contains { (collectionViewMessage) -> Bool in
+                print(uid, collectionViewMessage.uid)
+
+                return collectionViewMessage.uid == uid
+             }
+        } else { /* datasource nil */
+            contains = false
         }
-        
+         
          if contains == false {
             let senderId =  Me.uid
             let model = MessageModel(
